@@ -16,4 +16,7 @@ setInterval(() => {
 
    dx = window.getComputedStyle(dino, null).getPropertyValue('left');
    dy = window.getComputedStyle(dino, null).getPropertyValue('top');
+
+   ox = window.getComputedStyle(obstacle, null).getPropertyValue('left');
+   oy = window.getComputedStyle(obstacle, null).getPropertyValue('top');
 }, 100);
