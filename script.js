@@ -19,4 +19,6 @@ setInterval(() => {
 
    ox = window.getComputedStyle(obstacle, null).getPropertyValue('left');
    oy = window.getComputedStyle(obstacle, null).getPropertyValue('top');
+
+   offsetX = Math.abs(dx-ox);
 }, 100);
