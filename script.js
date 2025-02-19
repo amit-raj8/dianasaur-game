@@ -9,3 +9,11 @@ document.onkeydown = function(e){
         }, 700);
     }
 }
+
+setInterval(() => {
+   dino = document.querySelector('.dino');
+   gameOver = document.querySelector('.obstacle');
+
+   dx = window.getComputedStyle(dino, null).getPropertyValue('left');
+   dy = window.getComputedStyle(dino, null).getPropertyValue('top');
+}, 100);
