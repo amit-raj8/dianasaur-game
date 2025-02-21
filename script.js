@@ -22,4 +22,7 @@ setInterval(() => {
 
    offsetX = Math.abs(dx-ox);
    offsetY = Math.abs(dy-oy);
+   if(offsetX< 93 && offsetY<52){
+      gameOver.style.visibility = 'visible';
+   }
 }, 100);
