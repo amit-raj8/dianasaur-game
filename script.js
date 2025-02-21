@@ -24,5 +24,7 @@ setInterval(() => {
    offsetY = Math.abs(dy-oy);
    if(offsetX< 93 && offsetY<52){
       gameOver.style.visibility = 'visible';
+      obstacle.classList.remove('obstacleAni')
    }
+   
 }, 100);
