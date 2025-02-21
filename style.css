@@ -46,6 +46,10 @@ body{
     
 }
 
+.gameOver{
+    visibility: hidden;
+}
+
 
 @keyframes dino{
     0%{
