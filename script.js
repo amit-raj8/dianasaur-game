@@ -12,19 +12,21 @@ document.onkeydown = function(e){
 
 setInterval(() => {
    dino = document.querySelector('.dino');
-   gameOver = document.querySelector('.obstacle');
+   gameOver = document.querySelector('.gameOver');
+   obstacle = document.querySelector('.obstacle');
 
-   dx = window.getComputedStyle(dino, null).getPropertyValue('left');
-   dy = window.getComputedStyle(dino, null).getPropertyValue('top');
+   dx = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+   dy = parseInt(window.getComputedStyle(dino, null).getPropertyValue('top'));
 
-   ox = window.getComputedStyle(obstacle, null).getPropertyValue('left');
-   oy = window.getComputedStyle(obstacle, null).getPropertyValue('top');
+   ox = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('left'));
+   oy = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('top'));
 
    offsetX = Math.abs(dx-ox);
    offsetY = Math.abs(dy-oy);
+   console.log(offsetX, offsetY)
    if(offsetX< 93 && offsetY<52){
       gameOver.style.visibility = 'visible';
-      obstacle.classList.remove('obstacleAni')
+      obstacle.classList.remove('obstacleAni');
    }
-   
-}, 100);
+
+}, 100);parseInt
