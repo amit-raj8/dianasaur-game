@@ -8,7 +8,13 @@ document.onkeydown = function(e){
             dino.classList.remove('animateDino')
         }, 700);
     }
+    if(e.keyCode==39){
+        dino = document.querySelector('.dino');
+        dinoX = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+        dino.style.left = dinoX + 112+ "px";
 }
+}
+
 
 setInterval(() => {
    dino = document.querySelector('.dino');
@@ -29,4 +35,4 @@ setInterval(() => {
       obstacle.classList.remove('obstacleAni');
    }
 
-}, 100);parseInt
+},100);
