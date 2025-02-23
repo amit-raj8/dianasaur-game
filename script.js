@@ -1,3 +1,4 @@
+score = 0;
 document.onkeydown = function(e){
     console.log("Key code is: ", e.keyCode)
     console.log()
@@ -33,8 +34,7 @@ setInterval(() => {
    ox = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('left'));
    oy = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('top'));
 
-   offsetX = Math.abs(dx-ox);
-   offsetY = Math.abs(dy-oy);
+
    console.log(offsetX, offsetY)
    if(offsetX< 93 && offsetY<52){
       gameOver.style.visibility = 'visible';
